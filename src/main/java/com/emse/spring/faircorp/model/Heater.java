@@ -15,7 +15,7 @@ public class Heater {
     private Long power;
 
     @Column(nullable = false)
-    @Enumerated
+    @Enumerated(EnumType.STRING)
     private HeaterStatus HeaterStatus;
     @ManyToOne
     private Room room;
