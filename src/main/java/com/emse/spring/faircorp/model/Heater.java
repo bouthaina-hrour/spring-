@@ -17,13 +17,15 @@ public class Heater {
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
     private HeaterStatus HeaterStatus;
-    @ManyToOne
+
+    @ManyToOne(optional = false)
     private Room room;
 
     public Heater(){}
-    public Heater(String name,HeaterStatus heaterStatus){
+    public Heater(String name,HeaterStatus heaterStatus,Room room){
         this.HeaterStatus=heaterStatus;
         this.name=name;
+        this.room=room;
     }
 
     public String getName() {

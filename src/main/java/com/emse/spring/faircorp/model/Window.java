@@ -17,7 +17,7 @@ public class Window {
     @GeneratedValue
     private Long id;
 
-    @ManyToOne
+    @ManyToOne(optional = false)
     private Room room;
 
     public Window() {
