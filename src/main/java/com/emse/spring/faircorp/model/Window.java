@@ -23,7 +23,11 @@ public class Window {
     public Window() {
     }
 
-    public Window(String name, WindowStatus status,Room room) {
+    public Room getRoom() {
+        return room;
+    }
+
+    public Window(String name, WindowStatus status, Room room) {
         this.windowStatus = status;
         this.name = name;
         this.room=room;

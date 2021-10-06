@@ -18,7 +18,7 @@ dependencies {
     implementation 'com.h2database:h2'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-
+    implementation 'io.springfox:springfox-boot-starter:3.0.0'
 }
 
 test {
