@@ -27,6 +27,9 @@ public class Room {
     @OneToMany(mappedBy = "room")
    private Set<Window> windows;
 
+    @ManyToOne(optional = false)
+    private Building building;
+
     public Room(){}
 
     public Double getTargetTemperature() {

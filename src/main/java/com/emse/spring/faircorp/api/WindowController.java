@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.transaction.Transactional;
 import java.util.List;
+import java.util.function.Predicate;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 @RestController
@@ -26,7 +28,9 @@ public class WindowController {
     @GetMapping // (5)
     public List<WindowDto> findAll() {
 
-        return windowDao.findAll().stream().map(WindowDto::new).collect(Collectors.toList());  // (6)
+        return windowDao.findAll().stream()
+                .map(WindowDto::new)
+                .collect(Collectors.toList());  // (6)
     }
     @GetMapping(path = "/{id}")
     WindowDto findById(@PathVariable Long id){
