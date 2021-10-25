@@ -35,5 +35,11 @@ public class HeaterDaoTest {
         Assertions.assertThat(result).isEmpty();
 
     }
+    @Test
+    public void should() {
+        List<Heater> heaters=heaterDao.findByRoomId(-10L);
+        Assertions.assertThat(heaters.size()).isEqualTo(2);
+
+    }
 
 }

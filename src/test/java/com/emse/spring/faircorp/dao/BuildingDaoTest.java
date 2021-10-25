@@ -32,5 +32,17 @@ public class BuildingDaoTest {
 
 
     }
+    @Test
+    public void shouldShowBuildingHeaters() {
+
+
+
+
+        List<Heater> heaters = buildingDao.findHeatersByBuildingId(-10L);
+
+        Assertions.assertThat(heaters.size()).isEqualTo(2);
+
+
+    }
 
 }
