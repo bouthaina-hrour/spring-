@@ -88,9 +88,17 @@ public class Room {
         this.id = id;
     }
 
-    public Room(String name, int floor){
+    public Room(String name, int floor,Building building){
         this.name=name;
         this.floor=floor;
+        this.building=building;
     }
 
+    public Building getBuilding() {
+        return building;
+    }
+
+    public void setBuilding(Building building) {
+        this.building = building;
+    }
 }

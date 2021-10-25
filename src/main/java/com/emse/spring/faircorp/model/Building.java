@@ -46,4 +46,8 @@ public class Building {
 
     public Building() {
     }
+
+    public Building(double outsideTemperature) {
+        this.outsideTemperature = outsideTemperature;
+    }
 }
