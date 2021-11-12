@@ -36,6 +36,12 @@ public class WindowController {
     WindowDto findById(@PathVariable Long id){
         return windowDao.findById(id).map(WindowDto::new).orElse(null);
     }
+    @GetMapping(path = "/{room_id}")
+    public List<WindowDto> findByRoomId(@PathVariable Long id){
+
+        return windowDao.findByRoomId(id).stream().map(WindowDto::new).collect(Collectors.toList());
+    }
+
     @PostMapping
     public WindowDto create(@RequestBody  WindowDto dto){
         Room room =roomDao.getById(dto.getRoomId());
