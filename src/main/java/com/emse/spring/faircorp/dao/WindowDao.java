@@ -9,7 +9,7 @@ import java.util.List;
 
 public interface WindowDao extends JpaRepository<Window,Long> ,WindowDaoCustom{
 
-
+    List<Window> findByRoomId(Long id);
 
     @Modifying
     @Query("delete from Window w where w.room.id=?1")
