@@ -2,10 +2,6 @@ package com.emse.spring.faircorp.dto;
 
 import com.emse.spring.faircorp.model.Room;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-
 public class Roomdto {
 
     private Long id;

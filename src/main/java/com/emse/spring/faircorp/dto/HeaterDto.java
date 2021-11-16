@@ -2,7 +2,7 @@ package com.emse.spring.faircorp.dto;
 
 import com.emse.spring.faircorp.model.Heater;
 import com.emse.spring.faircorp.model.HeaterStatus;
-import com.emse.spring.faircorp.model.WindowStatus;
+
 
 public class HeaterDto {
 

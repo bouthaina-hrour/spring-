@@ -1,6 +1,6 @@
 package com.emse.spring.faircorp.model;
 
-import org.h2.api.UserToRolesMapper;
+
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
