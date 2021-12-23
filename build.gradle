@@ -2,7 +2,13 @@ plugins {
     id 'org.springframework.boot' version '2.5.4'
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java'
+    id "org.sonarqube" version "3.3"
+    id 'checkstyle'
+
+
+
 }
+
 
 group = 'com.emse.spring'
 version = '0.0.1'
@@ -19,8 +25,15 @@ dependencies {
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     implementation 'io.springfox:springfox-boot-starter:3.0.0'
+
+
+}
+checkstyle {
+    configFile = file("${project.rootDir}/config/checkstyle/checkstyle.xml")
+    toolVersion "7.2"
 }
 
 test {
     useJUnitPlatform()
 }
+

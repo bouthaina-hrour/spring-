@@ -7,7 +7,6 @@ import com.emse.spring.faircorp.dao.RoomDao;
 import com.emse.spring.faircorp.dao.WindowDao;
 import com.emse.spring.faircorp.dto.Roomdto;
 import com.emse.spring.faircorp.model.*;
-import io.swagger.v3.oas.annotations.parameters.RequestBody;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,7 +14,7 @@ import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
-
+@CrossOrigin("http://localhost:8081")
 @RestController
 @RequestMapping("/api/rooms")
 @Transactional
@@ -42,7 +41,7 @@ public class RoomController {
         Building building=buildingDao.getById(roomdto.getBuildingId());
         Room room =null;
         if(roomdto.getId()==null){
-            room=roomDao.save(new Room(roomdto.getName(),roomdto.getFloor(),building));
+            room=roomDao.save(new Room(roomdto.getFloor(),roomdto.getName(),roomdto.getCurrentTemperature(),roomdto.getTargetTemperature(),building));
 
         }else {
             room=roomDao.getById(roomdto.getId());

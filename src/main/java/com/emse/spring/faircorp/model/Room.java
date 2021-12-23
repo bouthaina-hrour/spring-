@@ -94,6 +94,14 @@ public class Room {
         this.building=building;
     }
 
+    public Room(int floor, String name, Double currentTemperature, Double targetTemperature, Building building) {
+        this.floor = floor;
+        this.name = name;
+        this.currentTemperature = currentTemperature;
+        this.targetTemperature = targetTemperature;
+        this.building = building;
+    }
+
     public Building getBuilding() {
         return building;
     }

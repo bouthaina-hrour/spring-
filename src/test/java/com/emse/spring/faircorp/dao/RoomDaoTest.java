@@ -21,9 +21,10 @@ public class RoomDaoTest {
     RoomDao roomDao;
 
 
-    @Test
+    /*@Test
     public void shouldFindRoomByName() {
         Room room =roomDao.findByName("Room1");
         Assertions.assertThat(room.getId()).isEqualTo(-10l);
 
-    }}
+    }*/
+}

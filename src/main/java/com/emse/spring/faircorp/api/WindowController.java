@@ -6,7 +6,6 @@ import com.emse.spring.faircorp.dto.WindowDto;
 import com.emse.spring.faircorp.model.Room;
 import com.emse.spring.faircorp.model.Window;
 import com.emse.spring.faircorp.model.WindowStatus;
-import io.swagger.v3.oas.annotations.parameters.RequestBody;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,7 +15,7 @@ import java.util.function.Predicate;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-@CrossOrigin(origins = "http://localhost:8080")
+@CrossOrigin("http://localhost:8081")
 @RestController
 @RequestMapping("/api/windows")
 @Transactional
