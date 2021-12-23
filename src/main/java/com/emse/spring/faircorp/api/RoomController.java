@@ -14,7 +14,7 @@ import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
-@CrossOrigin("http://localhost:8081")
+@CrossOrigin("http://localhost:8080")
 @RestController
 @RequestMapping("/api/rooms")
 @Transactional
