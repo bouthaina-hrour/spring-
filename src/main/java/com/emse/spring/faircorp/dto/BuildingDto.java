@@ -2,6 +2,9 @@ package com.emse.spring.faircorp.dto;
 
 import com.emse.spring.faircorp.model.Building;
 
+/**
+ * Data Transfer building that are published back to the client.
+ */
 public class BuildingDto {
     private Long id;
     private Double outsideTemperature;

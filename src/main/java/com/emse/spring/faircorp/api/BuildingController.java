@@ -34,6 +34,12 @@ public class BuildingController {
     @Autowired
     HeaterDao heaterDao;
 
+    /**
+     * lists all buildings
+     * @return the list of buildings
+     * @see com.emse.spring.faircorp.dao.BuildingDao
+     * @see com.emse.spring.faircorp.dto.BuildingDto
+     */
     @GetMapping
     public List<BuildingDto> findAll() {
 
@@ -41,6 +47,13 @@ public class BuildingController {
                 .map(BuildingDto::new)
                 .collect(Collectors.toList());
     }
+    /**
+     * creates a new building in the api
+     * @param buildingDto the data transfer you want to add as request body
+     * @return the buildingdto created
+     * @see com.emse.spring.faircorp.model.Building
+     * @see com.emse.spring.faircorp.dao.BuildingDao
+     */
     @PostMapping
     public BuildingDto create(@RequestBody BuildingDto buildingDto){
         Building building=null;
@@ -54,10 +67,28 @@ public class BuildingController {
         }
         return new BuildingDto(building);
     }
+    /**
+     * lists one specific building
+     * @param building_id the id of building you are searching for
+     * @return the buildingdto if it is found and null if not
+     * @see com.emse.spring.faircorp.dao.BuildingDao
+     * @see com.emse.spring.faircorp.dto.BuildingDto
+     */
     @GetMapping(path = "/{building_id}")
     BuildingDto findById(@PathVariable Long building_id){
         return buildingDao.findById(building_id).map(BuildingDto::new).orElse(null);
     }
+    /**
+     * deletes a specific building
+     * deletes also all his {@link com.emse.spring.faircorp.model.Room} and {@link com.emse.spring.faircorp.model.Heater} and {@link com.emse.spring.faircorp.model.Window}
+     * @param building_id the id of building you want to delete
+     * @see com.emse.spring.faircorp.dao.BuildingDao
+     * @see com.emse.spring.faircorp.dto.BuildingDto
+     * @see com.emse.spring.faircorp.model.Window
+     * @see com.emse.spring.faircorp.model.Room
+     * @see com.emse.spring.faircorp.model.Heater
+     * @see com.emse.spring.faircorp.model.Building
+     */
     @DeleteMapping(path = "/{building_id}")
     void deleteById(@PathVariable Long building_id){
         List<Room> rooms=roomDao.findByBuildingId(building_id);

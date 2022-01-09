@@ -3,6 +3,10 @@ package com.emse.spring.faircorp.dto;
 import com.emse.spring.faircorp.model.Window;
 import com.emse.spring.faircorp.model.WindowStatus;
 
+
+/**
+ * Data Transfer window that are published back to the client.
+ */
 public class WindowDto {
     private Long id;
     private String name;

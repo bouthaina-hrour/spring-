@@ -6,6 +6,10 @@ import javax.persistence.*;
 import java.util.List;
 import java.util.Set;
 
+
+/**
+ * persistent room
+ */
 @Entity
 public class Room {
 

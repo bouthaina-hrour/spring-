@@ -4,6 +4,9 @@ import com.emse.spring.faircorp.model.Heater;
 import com.emse.spring.faircorp.model.HeaterStatus;
 
 
+/**
+ * Data Transfer heater that are published back to the client.
+ */
 public class HeaterDto {
 
     private Long id;

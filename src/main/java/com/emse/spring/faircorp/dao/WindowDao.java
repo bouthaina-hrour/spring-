@@ -6,7 +6,9 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
-
+/**
+ * the class that make information exchange between window infos in database and the application
+ */
 public interface WindowDao extends JpaRepository<Window,Long> ,WindowDaoCustom{
 
     List<Window> findByRoomId(Long id);

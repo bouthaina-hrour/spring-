@@ -2,6 +2,10 @@ package com.emse.spring.faircorp.dto;
 
 import com.emse.spring.faircorp.model.Room;
 
+
+/**
+ * Data Transfer room that are published back to the client.
+ */
 public class Roomdto {
 
     private Long id;

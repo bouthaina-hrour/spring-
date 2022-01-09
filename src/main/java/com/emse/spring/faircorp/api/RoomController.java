@@ -28,14 +28,34 @@ public class RoomController {
     HeaterDao heaterDao;
     @Autowired
     BuildingDao buildingDao;
+    /**
+     * lists all rooms
+     * @return the list of rooms
+     * @see com.emse.spring.faircorp.dao.RoomDao
+     * @see com.emse.spring.faircorp.dto.Roomdto
+     */
     @GetMapping
     public List<Roomdto> findAll(){
         return roomDao.findAll().stream().map(Roomdto::new).collect(Collectors.toList());
     }
+    /**
+     * lists one specific room
+     * @param room_id the id of room you are searching for
+     * @return the buildingdto if it is found and null if not
+     * @see com.emse.spring.faircorp.dao.RoomDao
+     * @see com.emse.spring.faircorp.dto.Roomdto
+     */
     @GetMapping(path = "/{room_id}")
     public Roomdto findById(@PathVariable Long room_id){
         return roomDao.findById(room_id).map(Roomdto::new).orElse(null);
     }
+    /**
+     * creates a new room in the api
+     * @param roomdto the data transfer you want to add as request body
+     * @return the roomdto created
+     * @see com.emse.spring.faircorp.model.Room
+     * @see com.emse.spring.faircorp.dao.RoomDao
+     */
     @PostMapping
     public Roomdto create(@RequestBody Roomdto roomdto){
         Building building=buildingDao.getById(roomdto.getBuildingId());
@@ -52,7 +72,15 @@ public class RoomController {
         }
         return new Roomdto(room);
     }
-
+    /**
+     * deletes a specific room
+     * deletes also all his {@link com.emse.spring.faircorp.model.Window} and {@link com.emse.spring.faircorp.model.Heater}
+     * @param room_id the id of room you want to delete
+     * @see com.emse.spring.faircorp.dao.RoomDao
+     * @see com.emse.spring.faircorp.dto.Roomdto
+     * @see com.emse.spring.faircorp.model.Window
+     * @see com.emse.spring.faircorp.model.Heater
+     */
     @DeleteMapping(path = "/{room_id}")
     public void delete(@PathVariable Long room_id){
 
@@ -69,12 +97,15 @@ public class RoomController {
 
         roomDao.deleteById(room_id);
     }
-
+    /**
+     * modifies the status of all windows of a specific room
+     * @param room_id the id of what room you want to modify it windows' status
+     * @see com.emse.spring.faircorp.model.Window
+     * @see com.emse.spring.faircorp.dao.WindowDao
+     * @see  com.emse.spring.faircorp.dto.WindowDto
+     */
     @PutMapping(path = "/{room_id}/switchWindow")
     public void switchWindows(@PathVariable Long room_id){
-
-
-
         List<Window> windows= windowDao.findWindows(room_id);
         for (Window window:windows){
             if(window.getWindowStatus()==WindowStatus.CLOSED )
@@ -91,6 +122,13 @@ public class RoomController {
 
 
     }
+    /**
+     * modifies the status of all heaters of a specific room
+     * @param room_id the id of what room you want to modify it heaters' status
+     * @see com.emse.spring.faircorp.model.Window
+     * @see com.emse.spring.faircorp.dao.WindowDao
+     * @see  com.emse.spring.faircorp.dto.WindowDto
+     */
     @PutMapping(path = "/{room_id}/switchHeaters")
     public void switchHeaters(@PathVariable Long room_id){
 

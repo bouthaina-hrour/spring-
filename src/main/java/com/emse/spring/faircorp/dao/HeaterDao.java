@@ -6,7 +6,9 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
-
+/**
+ * the class that make information exchange between heater infos in database and the application
+ */
 public interface HeaterDao extends JpaRepository<Heater,Long> {
 
 

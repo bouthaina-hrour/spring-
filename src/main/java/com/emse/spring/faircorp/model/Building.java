@@ -7,7 +7,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import java.util.Set;
-
+/**
+ * persistent building
+ */
 @Entity
 public class Building {
 

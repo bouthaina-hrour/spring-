@@ -2,6 +2,10 @@ package com.emse.spring.faircorp.model;
 
 import javax.persistence.*;
 
+
+/**
+ * persistent heater
+ */
 @Entity
 public class Heater {
     @Id

@@ -3,6 +3,10 @@ package com.emse.spring.faircorp.model;
 
 import javax.persistence.*;
 
+
+/**
+ * persistent window
+ */
 @Entity
 @Table(name = "RWINDOW")
 public class Window {
