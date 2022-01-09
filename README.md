@@ -4,13 +4,7 @@
 
 
 <!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
+
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -23,7 +17,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a href="https://github.com/bouthaina-hrour/spring-">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -137,9 +131,14 @@ _Below is an example of how you can instruct your audience on installing and set
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+To use the api after running it , you can go to the swagger to do http request (GET POST PUT DELETE)
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+
+![alt text](https://github.com/bouthaina-hrour/spring-/readmeImages/swagger.png)
+
+Here is an example :
+
+![alt text](https://github.com/bouthaina-hrour/spring-/readmeImages/building.png)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
