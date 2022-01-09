@@ -58,12 +58,12 @@
 
 <!-- ABOUT THE PROJECT -->
 ## about the project
-## what is faircorp
+* what is faircorp
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 Faircorp api is an application which is able to manage the building , its rooms ,windows , and heaters.
-## how does faircorp work
+* how does faircorp work
 
 - the building has an outside temperature, and rooms
 - each room has zero or more heaters, has zero or more windows, a name, a floor, a current temperature, a target temperature.
@@ -102,7 +102,6 @@ This is an example of how to list things you need to use the software and how to
 
 ### Installation
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 1. Clone the repo
    ```sh
    git clone https://github.com/bouthaina-hrour/spring-.git
@@ -134,31 +133,13 @@ _Below is an example of how you can instruct your audience on installing and set
 To use the api after running it , you can go to the swagger to do http request (GET POST PUT DELETE)
 
 
-![alt text](https://github.com/bouthaina-hrour/spring-/readmeImages/swagger.png)
+![alt text](readmeImages/swagger.png)
 
 Here is an example :
 
-![alt text](https://github.com/bouthaina-hrour/spring-/readmeImages/building.png)
+![alt text](readmeImages/building.png)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 
 
 <!-- CONTRIBUTING -->
@@ -191,9 +172,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+HROUR bouthaina - [linkedin account : bouthaina-hrour](https://www.linkedin.com/in/bouthaina-hrour-68801019a/) 
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/bouthaina-hrour/spring-](https://github.com/bouthaina-hrour/spring-)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
